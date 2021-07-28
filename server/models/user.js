@@ -1,0 +1,26 @@
+const mongoose = require("mongoose");
+const { ObjectID } = mongoose.Schema;
+
+const UserSchema = new mongoose.Schema(
+    {
+        name: String,
+        email: {
+            type: String,
+            required: true,
+            index: true
+        },
+        role: {
+            type: String,
+            default: "subscriber"
+        },
+        cart: {
+            type: Array,
+            default: []
+        },
+        address: String,
+        // whishlist: [{ type: ObjectId, ref: "Product" }],
+    },
+    { timestamps: true }
+);
+
+module.exports = mongoose.model("User", UserSchema);
