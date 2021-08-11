@@ -31,6 +31,8 @@ import CategoryHome from './Pages/Category/CategoryHome';
 import SubHome from './Pages/Sub/SubHome';
 import Cart from "./Pages/Cart";
 import CheckOut from './Pages/Checkout';
+import CreateCouponPage from './Pages/Admin/Coupon/CreateCouponPage';
+import Payment from './Pages/Payment';
 
 const App = () => {
 
@@ -94,7 +96,10 @@ const App = () => {
         <Route exact path="/sub/:slug" component={SubHome} />
         <Route exact path="/cart" component={Cart} />
 
+        <AdminRoute exact path="/admin/coupon" component={CreateCouponPage} />
         <UserRoute exact path="/checkout" component={CheckOut} />
+
+        <Route exact path="/payment" component={Payment} />
       </Switch>
 
     </>

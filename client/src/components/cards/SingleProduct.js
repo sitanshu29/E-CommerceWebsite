@@ -11,6 +11,9 @@ import RatingModal from "../modal/RatingModal";
 import { showAverage } from "../../functions/rating";
 import _ from "lodash";
 import { useSelector, useDispatch } from "react-redux";
+import { addToWishlist } from "../../functions/user";
+import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 const { Meta } = Card;
 const { TabPane } = Tabs;
 
@@ -24,6 +27,8 @@ const SingleProduct = ({ product, onStarClick, star }) => {
     const { user, cart } = useSelector((state) => ({ ...state }));
     const dispatch = useDispatch();
 
+    //router
+    let history = useHistory();
     const handleAddToCart = () => {
 
         //create cart
@@ -50,6 +55,16 @@ const SingleProduct = ({ product, onStarClick, star }) => {
                 payload: unique,
             })
         }
+    }
+
+    //wishlist
+    const handleAddToWishlist = (e) => {
+        e.preventDefault();
+        addToWishlist(product._id, user.token).then((res) => {
+            console.log("ADDED TO WISHLIST", res.data);
+            toast.success("Added to Wishlist");
+            history.push("/user/wishlist");
+        })
     }
 
 
@@ -91,10 +106,12 @@ const SingleProduct = ({ product, onStarClick, star }) => {
                                 <br /> Add Product to Cart
                             </a>
                         </Tooltip>,
-                        <Link to="/">
-                            <HeartOutlined className="text-info" /> <br />
-                            Add to WishList
-                        </Link>,
+                        <>
+                            <a onClick={handleAddToWishlist}>
+                                <HeartOutlined className="text-info" /> <br />
+                                Add to WishList
+                            </a>
+                        </>,
                         <RatingModal>
                             <StarRating name={_id} numberOfStars={5}
                                 rating={star}

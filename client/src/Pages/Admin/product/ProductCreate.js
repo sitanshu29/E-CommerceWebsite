@@ -20,7 +20,7 @@ const initialState = {
     quantity: "",
     images: [],
     colors: ["Red", "Black", "Yellow", "White", "Blue"],
-    brands: ["Apple", "Samsung", "Microsoft", "Lenovo", "ASUS"],
+    brands: ["Apple", "Samsung", "Microsoft", "Lenovo", "Others"],
     color: "",
     brand: "",
 }
@@ -49,6 +49,7 @@ const ProductCreate = () => {
                 console.log(res);
                 toast.success(`"${res.data.title}" has been created`);
                 setValues(initialState);
+                window.location.reload();
             })
             .catch(err => {
                 console.log(err);

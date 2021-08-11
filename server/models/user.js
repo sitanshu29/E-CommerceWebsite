@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { ObjectID } = mongoose.Schema;
+const { ObjectId } = mongoose.Schema;
 
 const UserSchema = new mongoose.Schema(
     {
@@ -18,7 +18,7 @@ const UserSchema = new mongoose.Schema(
             default: []
         },
         address: String,
-        // whishlist: [{ type: ObjectId, ref: "Product" }],
+        wishlist: [{ type: ObjectId, ref: "Product" }],
     },
     { timestamps: true }
 );
