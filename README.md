@@ -1,6 +1,16 @@
 # E-Commerce Website
 
-![alt text](https://github.com/sitanshu29/E-CommerceWebsite/blob/[branch]/image.jpg?raw=true)
+
+
+  
+# Screeshots Of the App:   
+  
+![Homepage](https://github.com/sitanshu29/E-CommerceWebsite/blob/main/screenshots/1.jpg?raw=true)
+![Catergorization](https://github.com/sitanshu29/E-CommerceWebsite/blob/main/screenshots/2.jpg?raw=true)
+![Product Page](https://github.com/sitanshu29/E-CommerceWebsite/blob/main/screenshots/3.jpg?raw=true)
+![Related Products](https://github.com/sitanshu29/E-CommerceWebsite/blob/main/screenshots/4.jpg?raw=true)
+![Cart](https://github.com/sitanshu29/E-CommerceWebsite/blob/main/screenshots/4.jpg?raw=true)
+![Checkout Page](https://github.com/sitanshu29/E-CommerceWebsite/blob/main/screenshots/1.jpg?raw=true)
 
 
 ## Getting Started
