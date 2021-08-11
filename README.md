@@ -3,7 +3,7 @@
 
 
   
-# Screeshots Of the App:   
+# Screenhots Of the App:   
   
 ![Homepage](https://github.com/sitanshu29/E-CommerceWebsite/blob/main/screenshots/1.jpg?raw=true)
 ![Catergorization](https://github.com/sitanshu29/E-CommerceWebsite/blob/main/screenshots/2.jpg?raw=true)
